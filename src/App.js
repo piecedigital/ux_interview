@@ -11,7 +11,7 @@ class App extends Component {
         <div className="App-intro">
 
         <label className="SearchBox">
-            <input Value="Search for a hotel or restaurant"></input>
+            <input value="Search for a hotel or restaurant"></input>
         </label>
         </div>
       </div>
