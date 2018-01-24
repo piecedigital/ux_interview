@@ -1,7 +1,7 @@
 class LocalSearch{
     createHotelsList(){
         return [
-            {   
+            {
                 Name: "Hyatt House Seattle",
                 Address: "14615 NE 29th Place",
                 City: "Bellevue",
@@ -83,98 +83,98 @@ class LocalSearch{
             Cuisine: "Mexican",
             Address: "15802 NE 83rd St",
             City: "Redmond",
-            State: "WA" 
+            State: "WA"
          },
          {
              Name: "Sages Restaurant",
              Cuisine: "Italian",
              Address: "15916 NE 83rd St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Oto Sushi",
              Cuisine: "Japanese",
              Address: "18105 161st Ave NE",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Three Lions Pub",
              Cuisine: "British",
              Address: "8115 161st Ave NE",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Sam's Tavern",
              Cuisine: "Burger",
              Address: "15740 Redmond Way",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "The Stone House",
              Cuisine: "Amercian",
              Address: "16244 Cleveland St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Woodblock Redmond",
              Cuisine: "Amercian",
              Address: "16175 Cleveland St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Bangkok Basil",
              Cuisine: "Thai",
              Address: "7297 W Lake Sammamish Pkwy NE",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Niko Teriyaki",
              Cuisine: "Japanese",
              Address: "15948 Redmond Way Ste 102",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "The Guilt Trip",
              Cuisine: "Indian",
              Address: "8440 160th Ave NE",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Villiage Square Cafe",
              Cuisine: "American",
              Address: "16150 85th St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Sip Thai Bistro",
              Cuisine: "Thai",
              Address: "15146 NE 87th St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Tipsy Cow Burger Bar",
              Cuisine: "Burger",
              Address: "16345 Cleveland St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           },
           {
              Name: "Hello Poke",
              Cuisine: "Burger",
              Address: "16175 Cleveland St",
              City: "Redmond",
-             State: "WA" 
+             State: "WA"
           }];
     };
 
@@ -182,14 +182,14 @@ class LocalSearch{
         if(this.Restaurants === undefined) {
             this.Restaurants = this.createRestaurantsList();
         }
-        return this.Restaurants.filter(restaurant => restaurant.Name.includes(query) || restaurant.Cuisine.includes(query));
+        return this.Restaurants.filter(restaurant => restaurant.Name.toLowerCase().includes(query) || restaurant.Cuisine.toLowerCase().includes(query));
     }
 
     FindHotel(query) {
         if(this.Hotels === undefined) {
             this.Hotels = this.createHotelsList();
         }
-        return this.Hotels.filter(hotel => hotel.Name.includes(query));
+        return this.Hotels.filter(hotel => hotel.Name.toLowerCase().includes(query));
     }
 }
 
